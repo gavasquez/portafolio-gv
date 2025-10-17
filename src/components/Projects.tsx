@@ -4,7 +4,7 @@ const Projects = () => {
           id: 1,
           title: "Sistema de Votaciones CORHUILA",
           description: "Sistema completo de votaciones electrónicas desarrollado para la Corporación Universitaria del Huila. Permite la creación de tarjetones, planchas, usuarios y votantes con autenticación de dos pasos y validación OTP.",
-          technologies: ["Angular", "Laravel", "MySQL", "phpMyAdmin"],
+          technologies: ["Angular", "Laravel", "MySQL", "Postman", "Bootstrap", "phpMyAdmin"],
           image: "🗳️",
           status: "Completado",
           link: "https://votaciones.corhuila.edu.co/login",
@@ -53,6 +53,26 @@ const Projects = () => {
             "Check-in automatizado con validación de tickets",
             "Arquitectura en capas (Repository, Service, Views)",
             "Sistema de beneficios para usuarios"
+          ]
+        },
+        {
+          id: 4,
+          title: "Personal Branding Platform",
+          description: "Plataforma web integral para creación y gestión de sitios de marca personal con ecosistema completo de comunidades, eventos, catálogos y directorios profesionales. Arquitectura modular con 9 aplicaciones Django independientes, integración con AWS S3, sistema de pagos, marketing automation con segmentación avanzada y APIs RESTful documentadas con Swagger.",
+          technologies: ["Django", "Python", "MySQL", "Django REST Framework", "HTML5", "Bootstrap", "AWS S3", "Swagger", "Pillow"],
+          image: "🌟",
+          status: "Completado",
+          link: "https://pbrand.ai/",
+          color: "cyan",
+          features: [
+            "Gestión de sitios de marca personal con URLs personalizadas",
+            "Sistema de comunidades privadas/públicas con validación",
+            "Gestión de eventos con integración Eventix API",
+            "Catálogos y portafolios de productos/servicios",
+            "Sistema de pagos y suscripciones (EcartPay)",
+            "Segmentación y marketing multicanal (Email, SMS, WhatsApp)",
+            "Autenticación 2FA con OTP y códigos de acceso",
+            "Arquitectura multi-tenant con 9 módulos independientes"
           ]
         }
       ]
