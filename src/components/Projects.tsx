@@ -74,6 +74,31 @@ const Projects = () => {
             "Autenticación 2FA con OTP y códigos de acceso",
             "Arquitectura multi-tenant con 9 módulos independientes"
           ]
+        },
+        {
+          id: 5,
+          title: "Plataforma de Landing Pages Multi-Sitio",
+          description: "Sistema web escalable para crear y gestionar múltiples landing pages personalizables con panel de administración completo. Arquitectura multi-tenant que sirve a 3 sitios web en producción con identidades visuales únicas pero compartiendo la misma infraestructura tecnológica. Incluye CMS personalizado, integración con Cloudinary, sistema de autenticación con NextAuth y notificaciones por email.",
+          technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "MongoDB", "Prisma", "NextAuth", "Cloudinary"],
+          image: "🚀",
+          status: "Completado",
+          link: "https://rodandoconamigos.com.mx/",
+          multipleLinks: [
+            { name: "Rodando con Amigos", url: "https://rodandoconamigos.com.mx/" },
+            { name: "Logística de Transporte", url: "https://logisticadetransporte.com.mx/" },
+            { name: "Bella Sorpresa", url: "https://bellasorpresa.mx/" }
+          ],
+          color: "yellow",
+          features: [
+            "Arquitectura multi-tenant con 3 sitios en producción",
+            "CMS personalizado con editor WYSIWYG (TipTap)",
+            "Panel de administración completo para gestión de contenido",
+            "Integración con Cloudinary para optimización de imágenes",
+            "Sistema de autenticación seguro con NextAuth v5",
+            "Diseño responsivo con Server-Side Rendering (SSR)",
+            "Formularios de contacto con validación y notificaciones",
+            "Gestión de servicios, galería multimedia y redes sociales"
+          ]
         }
       ]
 
@@ -152,15 +177,33 @@ const Projects = () => {
               </div>
               
               <div className="flex gap-4">
-                <a 
-                  href={project.link}
-                  className="flex-1 text-center py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-semibold hover:scale-105 transition-all duration-300 cursor-pointer"
-                >
-                  👁️ Ver Proyecto
-                </a>
-                <button className="px-6 py-3 border border-white/30 rounded-lg text-white hover:bg-white/10 transition-all duration-300 cursor-pointer">
-                  📁 Código
-                </button>
+                {project.multipleLinks ? (
+                  <div className="flex-1 flex flex-col gap-3">
+                    {project.multipleLinks.map((link, linkIndex) => (
+                      <a 
+                        key={linkIndex}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-center py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-semibold hover:scale-105 transition-all duration-300 cursor-pointer"
+                      >
+                        👁️ {link.name}
+                      </a>
+                    ))}
+                  </div>
+                ) : (
+                  <>
+                    <a 
+                      href={project.link}
+                      className="flex-1 text-center py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-semibold hover:scale-105 transition-all duration-300 cursor-pointer"
+                    >
+                      👁️ Ver Proyecto
+                    </a>
+                    <button className="px-6 py-3 border border-white/30 rounded-lg text-white hover:bg-white/10 transition-all duration-300 cursor-pointer">
+                      📁 Código
+                    </button>
+                  </>
+                )}
               </div>
             </div>
           ))}
