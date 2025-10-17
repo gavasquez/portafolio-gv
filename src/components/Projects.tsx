@@ -34,6 +34,26 @@ const Projects = () => {
             "Módulo de roles y usuarios",
             "Arquitectura cliente-servidor con API en Laravel"
           ]
+        },
+        {
+          id: 3,
+          title: "Eventix Web - Plataforma de Gestión de Eventos",
+          description: "Plataforma completa de gestión y venta de boletos para eventos desarrollada con Django. Sistema integral que permite descubrir eventos, comprar tickets, realizar transferencias, y check-in mediante códigos de barras PDF417. Incluye autenticación robusta con verificación en dos pasos (email y SMS) e integración de pagos.",
+          technologies: ["Django", "Python", "MariaDB", "JavaScript", "HTML5", "CSS3", "API RESTful"],
+          image: "🎫",
+          status: "Completado",
+          link: "http://54.197.25.203/",
+          color: "purple",
+          features: [
+            "Autenticación con verificación OTP (email y SMS)",
+            "Catálogo de eventos con filtros avanzados",
+            "Sistema de compra y pago integrado",
+            "Generación de tickets con códigos de barras PDF417",
+            "Transferencia de tickets entre usuarios",
+            "Check-in automatizado con validación de tickets",
+            "Arquitectura en capas (Repository, Service, Views)",
+            "Sistema de beneficios para usuarios"
+          ]
         }
       ]
 
